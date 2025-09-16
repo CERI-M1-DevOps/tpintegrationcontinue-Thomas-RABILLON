@@ -53,7 +53,7 @@ class ListeSimpleTest {
 
     @Test
     void modifiePremier() {
-        listeATester.ajout(1);
+        listeATester.modifiePremier(1, 1);
         listeATester.ajout(2);
         listeATester.ajout(3);
         listeATester.modifiePremier(2, 4);
