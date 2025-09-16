@@ -85,9 +85,7 @@ class ListeSimpleTest {
     void supprimePremierListeAvec1SeulElement() {
         listeATester.ajout(1);
         listeATester.supprimePremier(2);
-        assertNull(listeATester.tete);
-        assertEquals("ListeSimple(Noeud(4))", listeATester.toString());
-        assertEquals(1, listeATester.tete.getSuivant().getElement());
+        assertEquals("ListeSimple(Noeud(1))", listeATester.toString());
     }
 
     @Test
