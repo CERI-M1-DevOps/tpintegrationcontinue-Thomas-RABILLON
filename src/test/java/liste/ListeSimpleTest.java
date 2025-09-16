@@ -86,7 +86,8 @@ class ListeSimpleTest {
         listeATester.ajout(1);
         listeATester.supprimePremier(2);
         assertNull(listeATester.tete);
-        assertEquals(0, listeATester.getSize());
+        assertEquals("ListeSimple(Noeud(4))", listeATester.toString());
+        assertEquals(1, listeATester.tete.getSuivant().getElement());
     }
 
     @Test
