@@ -17,4 +17,4 @@ jobs:
           java-version: '21'
           distribution: 'corretto'
       - name: Build package & test
-        run: mvn –B package
+        run: mvn -B package
