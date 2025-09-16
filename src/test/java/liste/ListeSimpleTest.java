@@ -80,6 +80,14 @@ class ListeSimpleTest {
         assertNull(listeATester.tete);
         assertEquals(0, listeATester.getSize());
     }
+    
+    @Test
+    void supprimePremierListeAvec1SeulElement() {
+        listeATester.ajout(1);
+        listeATester.supprimePremier(2);
+        assertNull(listeATester.tete);
+        assertEquals(0, listeATester.getSize());
+    }
 
     @Test
     void supprimePremierEnPremierePosition() {
