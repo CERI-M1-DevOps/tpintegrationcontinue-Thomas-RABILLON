@@ -4,15 +4,28 @@ public class ListeSimple {
     private long size;
     Noeud tete;
 
+    /**
+     * Renvoie la taille de la liste
+     * @return La taille de la liste
+     */
     public long getSize() {
         return size;
     }
 
+    /**
+     * Ajoute un élément à la liste
+     * @param element L'élément à ajouter
+     */
     public void ajout(int element) {
         tete = new Noeud(element, tete);
         size++;
     }
 
+    /**
+     * Modifie le premier élément correspondant à l'élément rechercher
+     * @param element L'élément rechercher
+     * @param nouvelleValeur L'élément remplaçant
+     */
     public void modifiePremier(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null && courant.getElement() != element)
@@ -21,6 +34,11 @@ public class ListeSimple {
             courant.setElement(nouvelleValeur);
     }
 
+    /**
+     * Modifie tous les éléments correspondant à l'élément rechercher
+     * @param element L'élément rechercher
+     * @param nouvelleValeur L'élément remplaçant
+     */
     public void modifieTous(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null) {
