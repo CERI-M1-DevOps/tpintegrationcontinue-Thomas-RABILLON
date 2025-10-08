@@ -1,0 +1,27 @@
+name: Java CI with Maven - Documentation
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  documentation:
+    name: Documentation
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Java Setup
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'corretto'
+      - name: Build Documentation
+        run: mvn -B javadoc::javadoc
+      - name: Deploy Documentation
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
